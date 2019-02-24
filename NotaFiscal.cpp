@@ -41,3 +41,8 @@ float NotaFiscal::getPrecoDaPeca()
 {
       return PrecodaPeca;
 }
+float NotaFiscal::getTotalNota()
+{
+      PrecoTotal= QComprada * PrecodaPeca;
+      return PrecoTotal;
+}

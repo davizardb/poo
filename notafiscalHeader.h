@@ -14,10 +14,11 @@ class NotaFiscal
     int getQuantidadeComprada();
     void setPrecoDaPeca(float);
     float getPrecoDaPeca();
-     getTotalNota()
+    float getTotalNota();
   private:
     string NPeca;
     string DescPeca;
     int QComprada;
     float PrecodaPeca;
+    float PrecoTotal;
 };
