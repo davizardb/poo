@@ -5,11 +5,19 @@ using namespace std;
 class NotaFiscal
 {
   public:
-    Conta(float);
-    float setSaldo();
-    float getSaldo();
-    void credito(float);
-    void debito(float);
+    NotaFiscal(const string &,const string &, int=0, float=0.0);
+    void setNumeroDaPeca(const string &);
+    string getNumeroDaPeca() const;
+    void setDescricaoDaPeca(const string &);
+    string getDescricaoDaPeca() const;
+    void setQuantidadeComprada(int);
+    int getQuantidadeComprada();
+    void setPrecoDaPeca(float);
+    float getPrecoDaPeca();
+     getTotalNota()
   private:
-    float saldoConta;
+    string NPeca;
+    string DescPeca;
+    int QComprada;
+    float PrecodaPeca;
 };

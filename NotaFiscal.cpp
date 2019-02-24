@@ -1,32 +1,43 @@
 #include <iostream>
-#include "contaHeader.h"
+#include "nostafiscalHeader.h"
 using namespace std;
 
-Conta::Conta(float saldoInicial)
+NotaFiscal::NotaFiscal(const string &num, const string &desc, int qnt, float preco)
 {
-    if(saldoInicial>=0)
-    {
-        saldoConta=saldoInicial;
-    }
-    else
-    {
-        saldoConta=0;
-        cout<<"Valor negativo inicializado no saldoInicial"<<endl;
-    }
+        NPeca = num;
+        DescPeca = desc;
+        QComprada = qnt;
+        PrecodaPeca = preco;
 }
-float Conta::getSaldo()
+void NotaFiscal::setNumeroDaPeca(const string &num)
 {
-    return saldoConta;
+      NPeca = num;
 }
-void Conta::credito(float credito)
+string NotaFiscal::getNumeroDaPeca() const
 {
-    saldoConta += credito;
+      return NPeca;
 }
-void Conta::debito(float debito)
+void NotaFiscal::setDescricaoDaPeca(const string &desc)
 {
-    if(debito>=saldoConta)
-    {
-        cout<<"Debito maior que o saldoConta"<<endl;
-    }
-    else saldoConta-=debito;
+      DescPeca = desc;
+}
+string NotaFiscal::getDescricaoDaPeca() const
+{
+      return DescPeca;
+}
+void NotaFiscal::setQuantidadeComprada(int qnt)
+{
+      QComprada = qnt;
+}
+int NotaFiscal::getQuantidadeComprada()
+{
+      return QComprada;
+}
+void NotaFiscal::setPrecoDaPeca(float preco)
+{
+      PrecodaPeca = preco;
+}
+float NotaFiscal::getPrecoDaPeca()
+{
+      return PrecodaPeca;
 }
