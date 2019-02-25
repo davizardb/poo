@@ -1,14 +1,9 @@
 #include <iostream>
-#include "nostafiscalHeader.h"
+#include <bits/stdc++.h>
+#include "nfHeader.h"
 using namespace std;
 
-NotaFiscal::NotaFiscal(const string &num, const string &desc, int qnt, float preco)
-{
-        NPeca = num;
-        DescPeca = desc;
-        QComprada = qnt;
-        PrecodaPeca = preco;
-}
+
 void NotaFiscal::setNumeroDaPeca(const string &num)
 {
       NPeca = num;
@@ -45,4 +40,4 @@ float NotaFiscal::getTotalNota()
 {
       PrecoTotal= QComprada * PrecodaPeca;
       return PrecoTotal;
-}
+};
