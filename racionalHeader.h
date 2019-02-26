@@ -2,22 +2,31 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class NotaFiscal
+class NumeroRacional
 {
   public:
-    void setNumeroDaPeca(const string &);
-    string getNumeroDaPeca() const;
-    void setDescricaoDaPeca(const string &);
-    string getDescricaoDaPeca() const;
-    void setQuantidadeComprada(int);
-    int getQuantidadeComprada();
-    void setPrecoDaPeca(float);
-    float getPrecoDaPeca();
-    float getTotalNota();
+    NumeroRacional(float, float);
+    void operator+(NumeroRacional);
+    void operator-(NumeroRacional);
+    void operator*(NumeroRacional);
+    void operator/(NumeroRacional);
+    void operator>(NumeroRacional);
+    void operator<(NumeroRacional);
+    void operator>=(NumeroRacional);
+    void operator<=(NumeroRacional);
+    void operator!=(NumeroRacional);
+    void operator==(NumeroRacional);
   private:
-    string NPeca;
-    string DescPeca;
-    int QComprada;
-    float PrecodaPeca;
-    float PrecoTotal;
+    float numerador;
+    float denominador;
+    float soma;
+    float subtracao;
+    float mult;
+    float div;
+    float Mque;
+    float Mnorque;
+    float Migual;
+    float Mnorigual;
+    float dif;
+    float igual;
 };
