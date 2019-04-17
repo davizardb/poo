@@ -1,5 +1,5 @@
-#include <bits/stdc++.h>
-
+#include <iostream>
+#include <string>
 using namespace std;
 
 class Veiculo
@@ -179,17 +179,20 @@ class VAnfibio: public virtual VAquatico, public virtual VTerrestre
     void print();
 };
     VAnfibio::VAnfibio(){}
-    VAnfibio::VAnfibio(float VelMAX, int passageiros, double potencia, float pesoMax, float dist, int colete, int portas, int retrovisor, int bagageiros, float horas)
+    VAnfibio::VAnfibio(float VelMAX, int passageiros, double potencia, float pesoMax, float dist, int colete, int portas, int retrovisor, int bagageiros, float horas):
+    Veiculo(VelMAX, passageiros, potencia), 
+    VAquatico(VelMAX, passageiros,potencia, pesoMax, dist, colete), 
+    VTerrestre(VelMAX, passageiros, potencia, portas, retrovisor, bagageiros)
     {
-        setVelMAX(VelMAX);
-        setPassageiros(passageiros);
-        setPot(potencia);
-        setpesoMax(pesoMax);
-        setDist(dist);
-        setColete(colete);
-        setPortas(portas);
-        setRetrov(retrovisor);
-        setBagager(bagageiros);
+        // setVelMAX(VelMAX);
+        // setPassageiros(passageiros);
+        // setPot(potencia);
+        // setpesoMax(pesoMax);
+        // setDist(dist);
+        // setColete(colete);
+        // setPortas(portas);
+        // setRetrov(retrovisor);
+        // setBagager(bagageiros);
         setHoras(horas);
     }
     void VAnfibio::setHoras(float horas)

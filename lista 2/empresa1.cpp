@@ -1,4 +1,5 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
 #define ety "--------------"
 
 using namespace std;
@@ -152,7 +153,8 @@ private:
     }
         int main ()
     {
-       
+       Restaurante A(ety,ety,ety,ety,ety,ety,ety,0);
+	A.print();
        Restaurante B("Dinogay", "Uece", "Fortalcity", "Ceara", "6077777-77", "3232323", "Ovo cru", 700.99);
        B.print();
     }
