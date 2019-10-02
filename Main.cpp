@@ -43,6 +43,6 @@ int main()
       cout << "Valor da nota em reaisi: " << nota1[i].getTotalNota() << endl;
            somaTotal += nota1[i].getTotalNota();
   }
-  cout << "Valor Total em reais " << somaTotal << endl;
+  cout << "Valor Total em dino reais " << somaTotal << endl;
   return 0;
 }
